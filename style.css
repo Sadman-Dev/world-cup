@@ -6,6 +6,11 @@ Fonts Import
 /* ---------
 Common Styles 
 --------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body
 {
     font-family: 'Poppins', sans-serif;
@@ -25,6 +30,7 @@ Hero Area
     background-color: #161616;
     margin-right: 30px;
     margin-left: 30px;
+    margin-top: 60px;
     border-radius: 30px;
 }
 
@@ -37,7 +43,8 @@ Hero Area
     font-weight: 900;
     line-height: 80px;
     color: #fff;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
+    margin-top: 70px;
 }
 .hero-desc p{
     color: #fff;
@@ -49,6 +56,11 @@ Hero Area
     background: #DD0000;
     color: #fff;
     border-radius: 5px;
+    transition: 1s;
+}
+.hero-desc a:hover{
+    color: #DD0000;
+    background: #fff;
 }
 
 .hero-desc a .fa-arrow-right{
@@ -205,6 +217,27 @@ Upcoming Match Area
     padding-right: 15px;
 }
 
+/* ----------
+All Group Area 
+-------------*/
+.groups{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    
+}
+
+.single-group{
+    border: 1px solid rgba(185, 185, 185, 0.2);
+    border-radius: 5px;
+    padding-bottom: 18px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+    
+}
+
+
+
 /* ------
 Tab Btn 
 -------*/
@@ -222,23 +255,27 @@ Tab Btn
 /* ----------------
 Footer Area 
 --------------------*/
+
 .footer-area{
     margin-top: 150px;
     background: #161616;
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
+
     
 }
 
 .footer-area h2{
     color: #fff;
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
 .footer-area hr{
-    border: 0.2px solid #B9B9B9;
-    width: 80%;
+    color: #B9B9B9;
+    width: 70%;
+    margin: auto;
 }
 .footer-links{
     margin-top: 35px;
@@ -248,8 +285,15 @@ Footer Area
     text-decoration: none;
     color: #B9B9B9;
 }
-
-
+.social-link{
+    margin-top: 50px;
+}
+.social-link a {
+    text-decoration: none;
+    font-size: 30px;
+    color: aqua;
+    margin-right: 17px;
+}
 
 /* --------
 Media Query 
@@ -311,8 +355,22 @@ Media Query
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 60px;
     }
+    .groups{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 60px;
+        text-align: center;
+    }
+    .single-group{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     .sidebar{
         margin-bottom: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        
         
     }
     .tab-btn{
@@ -355,14 +413,23 @@ Media Query
     }
     .sidebar{
         background: #fff;
+        border-radius: 5px;
+        /* margin-right: 0px; */
+        margin-left: 9%;
+        padding-top: 0px;
+        
+        
     }
     .btns{
         display: flex;
         flex-direction: row;
+        
+
     }
     .btns a button{
         background: salmon;
         margin-right: 12px;
+        
     }
     .blogs{
         grid-template-columns: repeat(2, 1fr);
@@ -374,7 +441,4 @@ Media Query
     }
         
 }
-/* Desktop View
-@media only screen and (min-width:769px){
-    
-} */
+
